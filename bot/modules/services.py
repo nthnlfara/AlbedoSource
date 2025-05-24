@@ -10,18 +10,18 @@ from ..helper.telegram_helper.bot_commands import BotCommands
 @new_task
 async def start(_, message):
     buttons = ButtonMaker()
-    buttons.url_button("Master", "https://t.me/anas_tayyar")
+    buttons.url_button("Master", "https://t.me/nthnlfara")
     reply_markup = buttons.build_menu(2)
     if await CustomFilters.authorized(_, message):
         start_string = f"""
-This bot can mirror from links|tgfiles|torrents|nzb|rclone-cloud to any rclone cloud, Google Drive or to telegram.
+I can mirror from links|tgfiles|torrents|nzb|rclone-cloud to any rclone cloud, Google Drive or to telegram.
 Type /{BotCommands.HelpCommand} to get a list of available commands
 """
         await send_message(message, start_string, reply_markup)
     else:
         await send_message(
             message,
-            "I can mirror from links|tgfiles|torrents|nzb|rclone-cloud to any rclone cloud, Google Drive or to telegram.\n\n⚠️ You Are not my master! Get out!",
+            "⚠️ You Are ot my master authorized user! Get out!",
             reply_markup,
         )
 
