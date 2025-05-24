@@ -74,7 +74,7 @@ async def get_telegraph_list(telegraph_content):
     path = [
         (
             await telegraph.create_page(
-                title="Mirror-Leech-Bot Drive Search", content=content
+                title="Albedo Drive Search", content=content
             )
         )["path"]
         for content in telegraph_content
